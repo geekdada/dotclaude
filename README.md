@@ -2,6 +2,14 @@
 
 A comprehensive development environment with specialized AI agents for code review, security analysis, and technical leadership.
 
+## Quick Sync
+
+Sync your local Claude configuration with this repository:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/FradSer/dotclaude/main/sync-to-github.sh | bash
+```
+
 ## Overview
 
 This project provides a structured approach to software development with AI-powered code review agents and established development principles. It combines SOLID architecture principles with specialized review agents to ensure high-quality, maintainable code.
