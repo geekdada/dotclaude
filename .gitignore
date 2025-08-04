@@ -1,0 +1,11 @@
+ide
+local
+projects
+shell-snapshots
+statsig
+todos
+.encryption_key
+count_tokens.js
+leaderboard.json
+leaderboard_submitted.json
+settings.json
