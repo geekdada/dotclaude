@@ -17,7 +17,6 @@ readonly RED='\033[0;31m' GREEN='\033[0;32m' YELLOW='\033[1;33m' BLUE='\033[0;34
 
 # Logging functions
 log_info() { echo -e "${BLUE}[INFO]${NC} $1"; }
-log_success() { echo -e "${GREEN}[SUCCESS]${NC} $1"; }
 log_warning() { echo -e "${YELLOW}[WARNING]${NC} $1"; }
 log_error() { echo -e "${RED}[ERROR]${NC} $1"; }
 
@@ -211,7 +210,7 @@ sync_items() {
         fi
     done
     
-    [ "$has_changes" = true ] && log_success "Files synced with user choices" || log_info "No changes needed"
+    [ "$has_changes" = true ] && log_info "Files synced with user choices" || log_info "No changes needed"
 }
 
 # Commit and push changes if any exist
@@ -234,7 +233,7 @@ commit_and_push() {
            git add .
            git commit -m "sync: update agents and CLAUDE.md - $(date '+%Y-%m-%d %H:%M:%S')"
            git push origin "$BRANCH"
-           log_success "Changes committed and pushed successfully" ;;
+           echo -e "${GREEN}Changes committed and pushed successfully${NC}" ;;
         2) log_warning "Skipping commit" ;;
         *) log_error "Invalid choice, skipping commit" ;;
     esac
@@ -256,7 +255,7 @@ main() {
     commit_and_push
     cleanup
     
-    log_success "Sync completed successfully!"
+    echo -e "${GREEN}Sync completed successfully!${NC}"
 }
 
 # Handle script interruption
