@@ -131,7 +131,7 @@ compare_items() {
             choice="$REPLY"
         fi
         
-        [ "$choice" -le 3 ] && handle_choice "$choice" "$local_path" "$repo_path" "$item" "$is_dir"
+        [[ "$choice" =~ ^[1-3]$ ]] && handle_choice "$choice" "$local_path" "$repo_path" "$item" "$is_dir"
         
     # Only local exists
     elif [ "$local_exists" = true ]; then
