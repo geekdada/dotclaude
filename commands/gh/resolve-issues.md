@@ -3,15 +3,16 @@
 Resolve issues using isolated worktrees, TDD approach, and protected PR workflow with automated issue closure.
 
 ## Prerequisites
+
 - `gh` CLI authenticated
-- Conventional commits (≤50 chars subject, ≤72 chars body) 
+- Conventional commits (≤50 chars subject, ≤72 chars body)
 - Protected branches require PR + review + CI
 - No direct pushes to main/develop
 
 ## Workflow
 
 1. **Select issue** - View all open issues by priority and choose next one to resolve
-2. **Create worktree** - Set up isolated workspace with feature branch 
+2. **Create worktree** - Set up isolated workspace with feature branch
 3. **TDD implementation** - Plan with @tech-lead-reviewer, red-green-refactor cycle, review with agents, commit changes
 4. **PR creation** - Run quality checks, push branch, open PR with auto-closing keywords
 5. **Cleanup** - Remove worktree after merge
@@ -19,6 +20,7 @@ Resolve issues using isolated worktrees, TDD approach, and protected PR workflow
 ## Branch Detection & Workflow
 
 Check current branch and existing worktrees:
+
 ```bash
 # Check current branch and worktree status
 CURRENT_BRANCH=$(git branch --show-current)
@@ -60,6 +62,7 @@ fi
 ## Issue Selection
 
 View all open issues prioritized (high → medium → low):
+
 ```bash
 # View all issues
 gh issue list --state open --limit 50
@@ -70,6 +73,7 @@ git status
 ## Worktree Setup
 
 Create isolated development environment:
+
 ```bash
 # Save current directory and determine base branch
 ORIGINAL_DIR=$(basename "$PWD")
@@ -105,6 +109,7 @@ exit 0
 ## PR Creation
 
 Quality checks before pushing:
+
 ```bash
 # Run quality checks (adapt commands to project)
 pnpm lint
@@ -119,6 +124,7 @@ gh pr create --title "<PR title>" --body "Fixes #$ISSUE_NUMBER"
 ## Cleanup
 
 After PR merge, remove worktree:
+
 ```bash
 cd "../$ORIGINAL_DIR"
 git worktree remove "../$ORIGINAL_DIR-worktree-$ISSUE_NUMBER"
@@ -135,6 +141,7 @@ git worktree remove "../$ORIGINAL_DIR-worktree-$ISSUE_NUMBER"
 ## Branch Naming
 
 AI generates concise, descriptive names:
+
 - `feature/123-webxr-fallback` - New functionality
 - `fix/456-auth-redirect` - Bug fixes  
 - `refactor/789-api-cleanup` - Code improvements

@@ -11,17 +11,21 @@ A sophisticated multi-agent configuration system for Claude Code that provides s
 New to the multi-agent system? Start here:
 
 ### 1. Sync Configuration
+
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/FradSer/dotclaude/main/sync-to-github.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/geekdada/dotclaude/main/sync-to-github.sh)
 ```
 
 ### 2. Basic Agent Usage
+
 In any Claude Code conversation:
+
 - `@agent-code-reviewer` - Review your code for issues
 - `@agent-security-reviewer` - Check for security vulnerabilities  
 - `@agent-ux-reviewer` - Evaluate user interface designs
 
 ### 3. Best Practice Workflow in `claude`
+
 Three-stage collaborative process for comprehensive code quality:
 
 1. **Hierarchical Review** - Use `/review/hierarchical` for thorough multi-agent analysis
@@ -38,12 +42,15 @@ Three-stage collaborative process for comprehensive code quality:
 Each step requires engineer validation to ensure Claude's output aligns with project goals and constraints. See [Collaboration Philosophy](#collaboration-philosophy) for partnership principles.
 
 ### 4. Essential Commands
+
 Open these templates as checklists in Claude Code:
+
 - **Quick review**: `commands/review/quick.md`
 - **Fix issues**: `commands/fix/code-quality.md`
 - **Commit changes**: `commands/git/commit-and-push.md`
 
 ### 5. Next Steps
+
 - Browse [Specialized Agents](#specialized-agents) for all available experts
 - Explore [Command Templates](#command-templates) for structured workflows
 - Set up [Multi-Agent Collaboration](#multi-agent-collaboration) pipelines
@@ -61,6 +68,7 @@ Open these templates as checklists in Claude Code:
 - At the end, you can choose to commit and push (generates a Conventional/Commitizen-style message or falls back to a built-in template)
 
 **Prerequisites:**
+
 - `git`, `curl`, `bash 3.2+` (macOS defaults are fine)
 - Optional: `colordiff` (for colored diffs), `claude` CLI (for better commit message generation)
 
@@ -116,36 +124,43 @@ Each agent provides domain-specific expertise for comprehensive code analysis:
 Structured workflows for common development tasks:
 
 ### Review Workflows
+
 - **`/review/quick`** - Two-stage rapid review process
 - **`/review/hierarchical`** - Multi-layered parallel reviews with consolidated output
 
 ### Fix Operations
+
 - **`/fix/code-quality`** - Code quality improvements (naming, complexity, performance)
 - **`/fix/security`** - Security vulnerability identification and remediation
 - **`/fix/ui`** - UI/UX consistency and usability enhancements
 
 ### Git Operations
+
 - **`/git/commit.md`** - Structured commit workflow
 - **`/git/commit-and-push`** - Combined commit and push operations
 - **`/git/push`** - Push with validation checks
 - **`/git/release`** - Git-flow release management
 
 ### GitHub Integration
+
 - **`/gh/create-issues`** - Issue creation with templates
 - **`/gh/resolve-issues`** - Smart issue resolution with branch detection, AI-generated names, and worktree continuation
 
 ### Development Utilities
+
 - **`/continue`** - Resume interrupted work sessions
 - **`/refactor`** - Systematic code refactoring checklist
 
 ## Usage Patterns
 
 ### Command-Driven Workflows
+
 1. **Open command templates** - Use `commands/*.md` files as interactive checklists
 2. **Follow structured processes** - Each template guides you through specific workflows
 3. **Maintain consistency** - Standardized approaches across team members
 
 ### Multi-Agent Collaboration
+
 ```bash
 # Example: Comprehensive review pipeline
 @agent-code-reviewer → @agent-security-reviewer → @agent-tech-lead-reviewer
@@ -162,6 +177,7 @@ Treat Claude Code as an excellent colleague who collaborates asynchronously. Thi
 GitHub with `gh` CLI creates seamless integration between Claude Code and project management. Issues, pull requests, and commits become structured documentation, transforming development into thoughtful technical writing where both human decisions and AI insights are captured and trackable.
 
 ### Sync Management
+
 - Run Quick Sync periodically to maintain alignment with the repository
 - Interactive diff resolution for local vs. remote changes
 - Automatic commit message generation with Conventional style
@@ -173,16 +189,19 @@ GitHub with `gh` CLI creates seamless integration between Claude Code and projec
 See `CLAUDE.md` for full development guidelines. Key points:
 
 **Architecture**
+
 - Follow SOLID principles; prefer composition over inheritance
 - Use dependency injection for testability
 - Repository pattern for data access, Strategy pattern for algorithmic variations
 
 **Code Quality**
+
 - Semantic naming; avoid magic numbers; keep functions small
 - Cover error scenarios with meaningful messages
 - Comment on "why" rather than "what"
 
 **Development Standards**
+
 - Search first when unsure; write tests for core functionality
 - Update docs with code changes; prefer `pnpm` for Node.js projects
 - Commit messages: English only, Conventional style (≤50 chars)
