@@ -36,6 +36,8 @@ The learnings are more valuable than the actual task execution as you will be ab
 - Keep files and functions concise
 - Single functions should not exceed 20 lines (except for complex logic)
 - Use meaningful comments to explain "why" rather than "what"
+- Avoid commenting on code that is self-explanatory
+- Avoid commenting on logging function calls unless it is absolutely necessary
 
 ### Error Handling
 
