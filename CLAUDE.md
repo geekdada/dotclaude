@@ -1,11 +1,5 @@
 # Global Development Guidelines
 
-## Memory
-
-Use the "memory" MCP tool to retrieve information required and store any new insights, knowledge, useful procedures in the memory
-MCP. Especially focus on the feedback you receive, so you can learn my preferences and apply these to all your future work.
-The learnings are more valuable than the actual task execution as you will be able to use them in the future.
-
 ## Architecture Principles
 
 ### SOLID Principles
