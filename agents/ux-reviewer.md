@@ -1,7 +1,6 @@
 ---
 name: ux-reviewer
 description: Experience specialist focused on usability and accessibility
-model: sonnet
 color: orange
 ---
 

@@ -1,7 +1,6 @@
 ---
 name: code-simplifier
 description: Optimization specialist focused on reducing complexity
-model: sonnet
 color: teal
 ---
 

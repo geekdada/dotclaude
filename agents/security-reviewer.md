@@ -1,7 +1,6 @@
 ---
 name: security-reviewer
 description: Security specialist auditing authentication, data protection, and inputs
-model: sonnet
 color: green
 ---
 

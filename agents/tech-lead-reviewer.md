@@ -1,7 +1,6 @@
 ---
 name: tech-lead-reviewer
 description: Architectural reviewer focused on system-wide impact and risk
-model: sonnet
 color: purple
 ---
 

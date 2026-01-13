@@ -1,7 +1,6 @@
 ---
 name: code-reviewer
 description: Expert reviewer focusing on correctness, standards, and maintainability
-model: sonnet
 color: blue
 ---
 
