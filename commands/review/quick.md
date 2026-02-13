@@ -2,6 +2,7 @@
 allowed-tools: Task
 description: Streamlined code review for rapid assessment and targeted feedback
 argument-hint: [files-or-directories]
+user-invocable: true
 ---
 
 ## Context

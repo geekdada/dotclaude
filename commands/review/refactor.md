@@ -2,6 +2,7 @@
 allowed-tools: Bash(git:*), Read, Edit, MultiEdit, Glob, Grep, Task
 description: Systematic code refactoring to improve quality while preserving functionality
 argument-hint: [files-or-directories]
+user-invocable: true
 ---
 
 ## Context

@@ -1,8 +1,8 @@
 ---
 allowed-tools: Task
 description: Comprehensive multi-stage code review using specialized subagents
-model: claude-haiku-4-5-20251001
 argument-hint: [files-or-directories]
+user-invocable: true
 ---
 
 ## Context
